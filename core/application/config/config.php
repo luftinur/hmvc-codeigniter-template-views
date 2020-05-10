@@ -526,5 +526,5 @@ $config['proxy_ips'] = '';
 
 /* HMVC Module Location */
 $config['modules_locations'] = array(
-    APPPATH.'modules/' => '../../../modules/',
+    APPPATH.'../../modules/' => '../../../modules/',
 );

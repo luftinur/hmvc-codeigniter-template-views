@@ -10,8 +10,6 @@
 
 
 class Theme{
-
-    protected static $theme_name;
     
     /** 
      * Render View to Theme Base on Config
@@ -20,7 +18,7 @@ class Theme{
      * $type => index of theme config base on config/theme_config.php
      * 
      * */ 
-    public static function renderView($data, $type = 'front'){
+    public static function renderView($data, $type = 'front', $hmvc = false){
 
         $ci =& get_instance();
 
@@ -28,11 +26,14 @@ class Theme{
         $theme_name = $theme[$type]["name"];
 
         /* Variabel $viewName to load in index.master.php */
-        $data['viewName'] = $theme_name.'/'.$data['fileName'];
-
-        /* Pass theme_name for template url */
+        if($hmvc){
+            $data['viewName'] = $data['fileName'];
+        }else{
+            $data['viewName'] = $theme_name.'/'.$data['fileName'];
+        }
        
 
+        /* Pass theme_name for template url */
         $theme_path = 'themes/'.$theme_name;
         $file_master = $theme[$theme_name]["file_master"];
 

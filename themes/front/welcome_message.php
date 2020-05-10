@@ -1,7 +1,7 @@
 
 <div id="container">
 	
-	<h1 style="display: flex; flex-direction: row-reverse; align-items: center; justify-content: space-between;"><span>Welcome to CodeIgniter! With Theme Helper</span> <a href="<?php echo base_url().'admin'; ?>"><strong>Go To Admin Theme ></strong></a></h1>
+	<h1 style="display: flex; align-items: center; justify-content: space-between;"><span>Welcome to CodeIgniter! With Theme Helper</span> <a href="<?php echo base_url().'admin'; ?>"><strong>Go To Admin Theme ></strong></a></h1>
 
 	<div id="body">
 	

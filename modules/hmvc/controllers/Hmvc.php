@@ -10,9 +10,9 @@ class Hmvc extends MY_Controller {
 
 	public function index()
 	{
-		$this->data['fileName'] = "welcome_hmvc.php";
-
+		$this->ci->data['fileName'] = "welcome_hmvc";
+		
 		// Without second parameter the view will load in front theme by default;
-		Theme::renderView($this->data, 'admin');
+		Theme::renderView($this->ci->data, parent::$front_theme , true);
 	}
 }

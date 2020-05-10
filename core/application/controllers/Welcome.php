@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Welcome extends CI_Controller {
+class Welcome extends MY_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -24,9 +24,9 @@ class Welcome extends CI_Controller {
 
 	public function index()
 	{
-		$this->data['fileName'] = "welcome_message.php";
-
+		$this->ci->data['fileName'] = "welcome_message.php";
+	
 		// Without second parameter the view will load in front theme by default;
-		Theme::renderView($this->data);
+		Theme::renderView($this->ci->data, parent::$front_theme);
 	}
 }
